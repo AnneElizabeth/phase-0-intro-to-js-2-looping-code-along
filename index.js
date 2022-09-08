@@ -1,15 +1,23 @@
-for (let age = 30; age < 40; age++) {
-  console.log(`I'm ${age} years old. Happy birthday to me!`);
-}
+const giftGivers = ["Adam", "Madeleine", "Doug"];
+const event = "housewarming";
 
-const gifts = ["teddy bear", "drone", "doll"];
+function writeCards(giftGivers, event) {
 
-function wrapGifts(gifts) {
-  for (let i = 0; i < gifts.length; i++) {
-    console.log(`Wrapped ${gifts[i]} and added a bow!`);
+    let customCards = [];
+    for (let i = 0; i < giftGivers.length; i++) {
+        customCards.push(`Thank you, ${giftGivers[i]}, for the amazing ${event} gift!`);
+    }
+    return customCards;
+    
   }
 
-  return gifts;
-}
+ console.log(writeCards(giftGivers, event));
 
-wrapGifts(gifts);
+
+function countDown(posNumber){
+    while(posNumber >= 0) {
+        console.log(posNumber);
+        posNumber--;
+    }
+}
+console.log(countDown(10));
